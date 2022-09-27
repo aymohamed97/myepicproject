@@ -24,7 +24,7 @@ pub mod myepicproject1 {
 
     pub fn add_gif(ctx: Context<AddGif>, gif_link: String) -> Result <()> {
         let base_account = &mut ctx.accounts.base_account;
-        let user=&mut ctx.accounts.user;
+        let user= &mut ctx.accounts.user;
         let item = ItemStruct {
             gif_link: gif_link.to_string(),
             user_address: *user.to_account_info().key,
